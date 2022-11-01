@@ -260,7 +260,7 @@ class TestFileContentsManager(TestCase):
                 file_in_hidden_path = os.path.join(hidden_dir,'visible.txt')
                 _make_dir(cm, hidden_dir)
                 model = cm.new(path=file_in_hidden_path)
-                old_path = cm._get_os_path(model['path'])
+                old_path = model['path']
                 new_path = "new.txt"
 
                 try:
@@ -278,7 +278,7 @@ class TestFileContentsManager(TestCase):
                 file_in_hidden_path = os.path.join(hidden_dir,'visible.txt')
                 _make_dir(cm, hidden_dir)
                 model = cm.new(path=file_in_hidden_path)
-                new_path = cm._get_os_path(model['path'])
+                new_path = model['path']
                 old_path = "old.txt"
 
                 try:
@@ -296,7 +296,7 @@ class TestFileContentsManager(TestCase):
                 file_in_hidden_path = os.path.join(hidden_dir,'.hidden.txt')
                 _make_dir(cm, hidden_dir)
                 model = cm.new(path=file_in_hidden_path)
-                old_path = cm._get_os_path(model['path'])
+                old_path = model['path']
                 new_path = "new.txt"
 
                 try:
@@ -314,7 +314,7 @@ class TestFileContentsManager(TestCase):
                 file_in_hidden_path = os.path.join(hidden_dir,'.hidden.txt')
                 _make_dir(cm, hidden_dir)
                 model = cm.new(path=file_in_hidden_path)
-                new_path = cm._get_os_path(model['path'])
+                new_path = model['path']
                 old_path = "old.txt"
 
                 try:
